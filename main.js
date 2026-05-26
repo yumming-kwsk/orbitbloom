@@ -18,7 +18,10 @@ function draw() {
 
   noStroke();
   fill(palette[2]);
-  drawFlower(1.5,1,2,frameCount);
+  push();
+  rotate(frameCount*0.8); 
+    drawFlower(1.5,1,2,frameCount);
+  pop();
 
   for (let angle = 0; angle < 360; angle += 360/24) {
     let x = cos(angle) * r;
@@ -40,7 +43,7 @@ function draw() {
     fill(palette[0]);
     circle(x*0.65, y*0.65, 20);//2
   push();
-  rotate(frameCount*0.3);   
+  rotate(frameCount*0.5);   
   push();
   translate(x*1.43, y*1.43);
   rotate(frameCount * 2);
@@ -49,7 +52,7 @@ function draw() {
   pop();  
     }else{
   push();
-  rotate(frameCount*0.3);    
+  rotate(frameCount*0.5);    
   push();
   translate(x*1.43, y*1.43);
   rotate(frameCount * -2);    
@@ -62,7 +65,7 @@ function draw() {
     fill(palette[0]);
     circle(x*1.74,y*1.74,8); //6
   push();
-  rotate(frameCount*0.24); 
+  rotate(frameCount*0.5); 
   push();
   translate(x*2.05, y*2.05);
   rotate(frameCount * -2);
