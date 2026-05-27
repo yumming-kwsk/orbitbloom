@@ -1,5 +1,4 @@
 
-
 let size = 30;
 let palette = ['#1B120F','#008B3E','#FFF000'];
 let bgColor = '#D9D9D9';
@@ -20,7 +19,7 @@ function draw() {
   fill(palette[2]);
   push();
   rotate(frameCount*0.8); 
-    drawFlower(1.5,1,2,frameCount);
+    drawFlower(1.5,1,2);
   pop();
 
   for (let angle = 0; angle < 360; angle += 360/24) {
@@ -33,7 +32,7 @@ function draw() {
   push();
   translate(x, y);
     rotate(frameCount * 2);  
-    drawFlower(1,0,2,-frameCount);//3
+    drawFlower(1,0,2);//3
   pop();
   pop();
     stroke(palette[0]);
@@ -47,7 +46,7 @@ function draw() {
   push();
   translate(x*1.43, y*1.43);
   rotate(frameCount * 2);
-    drawFlower(0.7,2,0,frameCount);//4
+    drawFlower(0.7,2,0);//4
   pop();  
   pop();  
     }else{
@@ -56,7 +55,7 @@ function draw() {
   push();
   translate(x*1.43, y*1.43);
   rotate(frameCount * -2);    
-    drawFlower(0.7,1,2,frameCount); //5
+    drawFlower(0.7,1,2); //5
   pop();
   pop();
     }
@@ -69,16 +68,15 @@ function draw() {
   push();
   translate(x*2.05, y*2.05);
   rotate(frameCount * -2);
-    drawFlower(0.35,1,2,frameCount); //7
+    drawFlower(0.35,1,2); //7
   pop();
   pop();
   }
 }
 
 
-function drawFlower(fs,col1,col2,rot){
+function drawFlower(fs,col1,col2){
  push();
- rotate(rot * 0.2);
  fill(palette[col1]);
  circle(size/2*fs,+size/2*fs,size*fs);
  circle(+size/2*fs,-size/2*fs,size*fs);
